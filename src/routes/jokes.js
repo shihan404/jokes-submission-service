@@ -160,4 +160,27 @@ router.get("/pending", jokeController.getPendingJokes);
  */
 router.delete("/:id", jokeController.deleteJoke);
 
+/**
+ * @swagger
+ * /api/jokes/test:
+ *   get:
+ *     summary: Test route that says hello
+ *     tags:
+ *       - Jokes
+ *     responses:
+ *       200:
+ *         description: Returns a hello message
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: "Hello from the test route!"
+ */
+router.get("/test", (req, res) => {
+    res.json({ message: "Hello from the test route!" });
+});
+
 module.exports = router;
