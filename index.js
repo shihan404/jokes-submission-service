@@ -26,6 +26,10 @@ const swaggerOptions = {
             {
                 url: 'http://localhost:5005',
             },
+            {
+                url: 'https://jokes-submission-service.vercel.app/',
+                description: 'Production server',
+            },
         ],
     },
     apis: ['./src/routes/*.js'],
